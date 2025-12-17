@@ -4,6 +4,7 @@
 // write a program that uses Color objects, you must first
 // import the java.awt.Color class into your code. That's
 // what the next statement does.
+
 import java.awt.Color;
 
 /**
