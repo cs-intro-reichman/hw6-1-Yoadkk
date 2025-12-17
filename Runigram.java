@@ -8,10 +8,10 @@ public class Runigram {
 
         // To access the RGB values of a Color object,
         // we use three "get" nethods. For example: 
-		Color[][] ironMan = read("ironman.ppm");
-		Color[][] cake = read("cake.ppm");
+		Color[][] tinypic = read("tinypic.ppm");
 
-		morph(ironMan, cake, 10);
+
+		
 		
 		// Tests the reading and printing of an image:	
 		// Color[][] tinypic = read("tinypic.ppm");
@@ -20,7 +20,7 @@ public class Runigram {
 		// Color[][] xMen = read("xmen.ppm");
 		// //print(tinypic);
 
-		// print(scaled(tinypic, 3, 5));
+		print(grayScaled(tinypic));
 
 		
 
@@ -127,9 +127,9 @@ public class Runigram {
 	// lum = 0.299 * r + 0.587 * g + 0.114 * b, and returns a Color object consisting
 	// the three values r = lum, g = lum, b = lum.
 	private static Color luminance(Color pixel) {
-		int r = (int)(0.299*((double)pixel.getRed()));
-		int g = (int)(0.587*((double)pixel.getGreen()));
-		int b = (int)(0.114*((double)pixel.getBlue()));
+		int r = (int)Math.floor((0.299*((double)pixel.getRed())));
+		int g = (int)Math.round((0.587*((double)pixel.getGreen())));
+		int b = (int)Math.floor((0.114*((double)pixel.getBlue())));
 
 		int rgb = r+g+b;
 		Color lumColor = new Color(rgb,rgb,rgb);
